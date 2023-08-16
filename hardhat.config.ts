@@ -31,16 +31,18 @@ export default {
       url: 'http://127.0.0.1:8545',
     },
     goerli: {
-      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_SECRET}`,
-      accounts: {
-        mnemonic:
-          process.env.PROD_MNEMONIC || Wallet.createRandom().mnemonic.phrase,
-      },
+      // url: 'https://rpc.ankr.com/eth_goerli',
+      url: `https://eth-goerli.g.alchemy.com/v2/${process.env.ALCHEMY_API_KEY}`,
+      accounts: [
+        process.env.DEV_WALLET_PK,
+        // { mnemonic: process.env.DEV_MNEMONIC || Wallet.createRandom().mnemonic.phrase },
+      ],
       minGasPrice: 10000000000,
       gasMultiplier: 1.5,
     },
     mainnet: {
-      url: `https://mainnet.infura.io/v3/${process.env.INFURA_SECRET}`,
+      // url: `https://mainnet.infura.io/v3/${process.env.INFURA_SECRET}`,
+      url: 'https://rpc.ankr.com/eth',
       accounts: {
         mnemonic:
           process.env.PROD_MNEMONIC || Wallet.createRandom().mnemonic.phrase,

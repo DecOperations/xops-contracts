@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: UNLICENSED
+pragma solidity ^0.8.4;
+
 // Public interface definition for the AMPL - ERC20 token on Ethereum (the base-chain)
 interface IAMPL {
     // ERC20

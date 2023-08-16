@@ -68,8 +68,8 @@ export async function verify(
 ) {
   try {
     await hre.run('verify:verify', { address, constructorArguments })
-  } catch (e) {
-    console.log('Verification failed:', e)
+  } catch (e: any) {
+    console.log('Verification failed:', e?.message)
     console.log('Execute the following')
     console.log(
       `yarn hardhat run verify:verify --address ${address}  --constructor-arguments "${JSON.stringify(

@@ -14,7 +14,7 @@ import {
 // base => token, policy, orchestrator
 task('deploy:xops:base:testnet', 'Deploy xOPS contract suite for testnet')
   .addFlag('verify', 'The ERC-20 name of the wAMPL token')
-  .addFlag('setupMultisig', 'Sets up multisig admin and transfers onwership')
+  .addFlag('setupMultisig', 'Sets up multisig admin and transfers ownership')
   .setAction(async (args, hre) => {
     // HARD-CODED config values
 
@@ -189,7 +189,7 @@ task('deploy:xops:base:testnet', 'Deploy xOPS contract suite for testnet')
 
 task('deploy:amplforce:testnet', 'Deploy ampleforth contract suite for testnet')
   .addFlag('verify', 'The ERC-20 name of the wAMPL token')
-  .addFlag('setupMultisig', 'Sets up multisig admin and transfers onwership')
+  .addFlag('setupMultisig', 'Sets up multisig admin and transfers ownership')
   .setAction(async (args, hre) => {
     // HARD-CODED config values
 
